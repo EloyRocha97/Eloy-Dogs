@@ -18,7 +18,6 @@ const Home = () => {
 
   const allDogs = useSelector((state) => state.dogs);
   const allTemps = useSelector((state) => state.allTemperaments);
-  console.log("Teeeeeeeemps", allTemps);
   const [orden, setOrden] = useState("");
 
   useEffect(() => {
@@ -29,8 +28,8 @@ const Home = () => {
   //////////////// PAGINADO 1-15
   const [currentPage, setCurrentPage] = useState(1);
   const currentdogs = allDogs.slice(
-    (currentPage - 1) * 3,
-    (currentPage - 1) * 3 + 3
+    (currentPage - 1) * 10,
+    (currentPage - 1) * 10 + 10
   );
 
   //CARGAR TODO*************************************************

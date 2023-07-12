@@ -7,18 +7,14 @@ const CardsContainer = ({ dogs }) => {
   return (
     <div className="cards">
       {dogs &&
-        dogs?.map((e, i) => (
-          <div key={e.id}>
-            <Link
-              style={{ textDecoration: "none" }}
-              to={`/dogs/${e.id}`}
-              key={e.id}
-            >
+        dogs?.map((dog) => (
+          <div key={dog.id}>
+            <Link className="link" to={`/dogs/${dog.id}`}>
               <Card
-                image={e.image}
-                name={e.name}
-                temperament={e.temperament.join(", ")}
-                weight={e.weight}
+                name={dog.name}
+                image={dog.image}
+                temperament={dog.temperament.join(", ")}
+                weight={dog.weight}
               />
             </Link>
           </div>

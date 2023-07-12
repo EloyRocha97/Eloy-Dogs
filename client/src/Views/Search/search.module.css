@@ -6,8 +6,8 @@
 }
 
 .all {
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: -40px;
+  margin-bottom: 10px;
   margin-right: 40px;
   display: flex;
   justify-content: flex-end;

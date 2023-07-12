@@ -1,0 +1,41 @@
+.boton {
+  border-color: rgb(0, 0, 0);
+  border-radius: 20px;
+  width: 100px;
+  background-color: antiquewhite;
+}
+
+.juli {
+  margin-bottom: 40px;
+  margin-right: 40px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  /* pone un espacio entre el input y el boton ↑*/
+}
+
+.input {
+  width: 300px;
+  height: 25px;
+  border-radius: 20px;
+  padding-left: 10px;
+  /* se separa el placeholder del borde ↑*/
+  background-color: antiquewhite;
+}
+
+.searchBar:hover {
+  background-color: rgb(225, 177, 20);
+  border-radius: 7px;
+  box-shadow: 0 25px 30px 0 rgba(225, 139, 11, 0.75),
+    0 27px 80px 0 rgba(220, 224, 7, 0.75);
+}
+
+.searchBar1 {
+  border-color: rgb(0, 0, 0);
+  border-radius: 9px;
+}
+
+.searchBar1:hover {
+  background-color: rgba(197, 100, 15, 0.557);
+  border-radius: 7px;
+}

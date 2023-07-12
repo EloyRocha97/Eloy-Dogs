@@ -21,7 +21,7 @@ export default function SearchBar() {
   }
 
   return (
-    <div className={styles.juli}>
+    <div className={styles.all}>
       <input
         value={input}
         type="text"

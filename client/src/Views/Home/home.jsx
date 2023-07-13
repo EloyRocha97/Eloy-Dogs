@@ -131,7 +131,6 @@ const Home = () => {
           </select>
         </div>
       </div>
-      <br></br>
 
       <div>
         <Paginate

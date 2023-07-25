@@ -9,8 +9,10 @@ const Card = (props) => {
       </div>
       <h3>{props.name}</h3>
       {/* <span className="temperamentos">Temperaments: {props.temperament}</span> */}
-      <p>Height: {props.height}</p>
-      <p>Weight: {props.weight}</p>
+      <div className="p">
+        <p>Height: {props.height}</p>
+        <p>Weight: {props.weight}</p>
+      </div>
     </div>
   );
 };

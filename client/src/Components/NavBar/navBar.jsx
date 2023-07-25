@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import SearchBar from "../../Views/Search/search";
 import style from "./navBar.module.css";
 
 const NavBar = () => {
@@ -28,6 +29,9 @@ const NavBar = () => {
         >
           <span>INICIO</span>
         </NavLink>
+      </div>
+      <div>
+        <SearchBar />
       </div>
     </div>
   );

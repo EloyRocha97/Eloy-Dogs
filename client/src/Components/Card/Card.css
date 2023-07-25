@@ -1,9 +1,9 @@
 .card {
   border-radius: 20px;
-  background-color: #b6652e59;
+  background-color: #b3893b31;
   display: inline-block;
-  width: 200px;
-  height: 300px;
+  width: 250px;
+  height: 350px;
   text-align: center;
   padding: 5px;
 }
@@ -59,7 +59,7 @@
 
 .text-container h3 {
   margin: 20px 0px 10px 0px;
-  color: #000000;
+  color: rgb(185, 79, 30);
   font-size: 17px;
   text-align: center;
 }

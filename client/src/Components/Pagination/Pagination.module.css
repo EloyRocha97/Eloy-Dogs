@@ -20,14 +20,14 @@
   background-color: transparent;
   border: 3px solid rgba(223, 142, 49, 0.788);
   border-radius: 5px;
-  color: rgb(0, 0, 0);
+  color: rgb(185, 79, 30);
   font-weight: bold;
   padding: 10px;
   cursor: pointer;
 }
 
 .pageNum {
-  color: #000000;
+  color: rgb(185, 79, 30);
 }
 
 .pageLink {

@@ -1,10 +1,11 @@
 .NavLinks {
+  border-bottom: 2px solid rgba(142, 19, 0, 0.30196078431372547);
   top: 0;
   position: fixed;
   width: 100%;
   z-index: 100;
-  background-color: #b3b3b380;
-  height: 3em;
+  background-color: #b3893b31;
+  height: 4em;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -13,13 +14,13 @@
 }
 
 .Link {
-  color: black;
+  color: rgb(185, 79, 30);
   font-size: 20px;
   text-decoration: none;
   font-weight: 500;
 }
 
 .Link:hover {
-  color: #b3b3b3;
+  color: rgb(0, 0, 0);
   transition: color 0.5s;
 }

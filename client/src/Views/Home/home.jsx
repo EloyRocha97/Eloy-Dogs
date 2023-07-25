@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import CardsContainer from "../../Components/CardContainer/cardsContainer";
 import Paginate from "../../Components/Pagination/Pagination";
-import SearchBar from "../Search/search";
+
 import {
   getDogs,
   getTemperaments,
@@ -28,8 +28,8 @@ const Home = () => {
   //////////////// PAGINADO 1-15
   const [currentPage, setCurrentPage] = useState(1);
   const currentdogs = allDogs.slice(
-    (currentPage - 1) * 10,
-    (currentPage - 1) * 10 + 10
+    (currentPage - 1) * 8,
+    (currentPage - 1) * 8 + 8
   );
 
   //CARGAR TODO*************************************************
@@ -65,18 +65,17 @@ const Home = () => {
 
   return (
     <div className={style.margen}>
-      <SearchBar />
       <div className={style.orderContainer}>
         <button
           onClick={(e) => {
             loading(e);
           }}
-          className={style.boton}
+          className={style.botons}
         >
           Traer Todo
         </button>
         <div>
-          <h3>Orden Por Peso</h3>
+          <h3 className={style.textFil}>Orden Por Peso</h3>
           <select
             onChange={(e) => handleSortWeigth(e)}
             className={style.botons}
@@ -90,7 +89,7 @@ const Home = () => {
         </div>
 
         <div>
-          <h3>Orden Por Nombre</h3>
+          <h3 className={style.textFil}>Orden Por Nombre</h3>
           <select onChange={(e) => handleSortName(e)} className={style.botons}>
             <option value="Todos" default>
               Todos
@@ -101,7 +100,7 @@ const Home = () => {
         </div>
 
         <div>
-          <h3>Filtrar Por Origen</h3>
+          <h3 className={style.textFil}>Filtrar Por Origen</h3>
           <select
             onChange={(e) => handleFilterCreator(e)}
             className={style.botons}
@@ -115,7 +114,7 @@ const Home = () => {
         </div>
 
         <div>
-          <h3>Filtrar Por Temperamento</h3>
+          <h3 className={style.textFil}>Filtrar Por Temperamento</h3>
           <select
             onChange={(e) => handleFilterTemp(e)}
             className={style.botons}

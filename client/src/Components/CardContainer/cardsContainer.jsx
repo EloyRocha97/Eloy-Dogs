@@ -13,6 +13,7 @@ const CardsContainer = ({ dogs }) => {
               <Card
                 name={dog.name}
                 image={dog.image}
+                height={dog.height}
                 temperament={dog.temperament.join(", ")}
                 weight={dog.weight}
               />

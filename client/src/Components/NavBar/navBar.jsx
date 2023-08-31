@@ -30,7 +30,7 @@ const NavBar = () => {
           <span>INICIO</span>
         </NavLink>
       </div>
-      <div>
+      <div className={style.search}>
         <SearchBar />
       </div>
     </div>

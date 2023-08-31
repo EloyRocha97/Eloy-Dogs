@@ -1,43 +1,137 @@
-.boton {
-  border-color: rgb(185, 79, 30);
-  border-radius: 20px;
-  width: 100px;
-  background-color: #b3893b31;
+@media screen and (min-width: 1075px) {
+  .boton {
+    border-color: rgb(185, 79, 30);
+    border-radius: 20px;
+    width: 100px;
+    background-color: #b3893b31;
+  }
+
+  .all {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-right: -160px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    /* pone un espacio entre el input y el boton ↑*/
+  }
+
+  .input {
+    border-color: rgb(185, 79, 30);
+    width: 300px;
+    height: 25px;
+    border-radius: 20px;
+    padding-left: 10px;
+    /* se separa el placeholder del borde ↑*/
+    background-color: #b3893b31;
+  }
+
+  .searchBar:hover {
+    background-color: rgb(225, 177, 20);
+    border-radius: 7px;
+    box-shadow: 0 25px 30px 0 rgba(225, 139, 11, 0.75),
+      0 27px 80px 0 rgba(220, 224, 7, 0.75);
+  }
+
+  .searchBar1 {
+    border-color: rgb(0, 0, 0);
+    border-radius: 9px;
+  }
+
+  .searchBar1:hover {
+    background-color: rgba(197, 100, 15, 0.557);
+    border-radius: 7px;
+  }
 }
 
-.all {
-  margin-top: 5px;
-  margin-bottom: 10px;
-  margin-right: -160px;
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-  /* pone un espacio entre el input y el boton ↑*/
+@media screen and (min-width: 800px) {
+  .boton {
+    border-color: rgb(185, 79, 30);
+    border-radius: 20px;
+    width: 55px;
+    background-color: #b3893b31;
+  }
+
+  .all {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-right: -60px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    /* pone un espacio entre el input y el boton ↑*/
+  }
+
+  .input {
+    border-color: rgb(185, 79, 30);
+    width: 250px;
+    height: 25px;
+    border-radius: 20px;
+    padding-left: 10px;
+    /* se separa el placeholder del borde ↑*/
+    background-color: #b3893b31;
+  }
+
+  .searchBar:hover {
+    background-color: rgb(225, 177, 20);
+    border-radius: 7px;
+    box-shadow: 0 25px 30px 0 rgba(225, 139, 11, 0.75),
+      0 27px 80px 0 rgba(220, 224, 7, 0.75);
+  }
+
+  .searchBar1 {
+    border-color: rgb(0, 0, 0);
+    border-radius: 9px;
+  }
+
+  .searchBar1:hover {
+    background-color: rgba(197, 100, 15, 0.557);
+    border-radius: 7px;
+  }
 }
 
-.input {
-  border-color: rgb(185, 79, 30);
-  width: 300px;
-  height: 25px;
-  border-radius: 20px;
-  padding-left: 10px;
-  /* se separa el placeholder del borde ↑*/
-  background-color: #b3893b31;
-}
+@media screen and (min-width: 280px) {
+  .boton {
+    border-color: rgb(185, 79, 30);
+    border-radius: 20px;
+    width: 55px;
+    background-color: #b3893b31;
+  }
 
-.searchBar:hover {
-  background-color: rgb(225, 177, 20);
-  border-radius: 7px;
-  box-shadow: 0 25px 30px 0 rgba(225, 139, 11, 0.75),
-    0 27px 80px 0 rgba(220, 224, 7, 0.75);
-}
+  .all {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-right: -10px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    /* pone un espacio entre el input y el boton ↑*/
+  }
 
-.searchBar1 {
-  border-color: rgb(0, 0, 0);
-  border-radius: 9px;
-}
+  .input {
+    border-color: rgb(185, 79, 30);
+    width: 200px;
+    height: 20px;
+    border-radius: 20px;
+    padding-left: 5px;
+    /* se separa el placeholder del borde ↑*/
+    background-color: #b3893b31;
+  }
 
-.searchBar1:hover {
-  background-color: rgba(197, 100, 15, 0.557);
-  border-radius: 7px;
+  .searchBar:hover {
+    background-color: rgb(225, 177, 20);
+    border-radius: 7px;
+    box-shadow: 0 25px 30px 0 rgba(225, 139, 11, 0.75),
+      0 27px 80px 0 rgba(220, 224, 7, 0.75);
+  }
+
+  .searchBar1 {
+    border-color: rgb(0, 0, 0);
+    border-radius: 9px;
+  }
+
+  .searchBar1:hover {
+    background-color: rgba(197, 100, 15, 0.557);
+    border-radius: 7px;
+  }
 }

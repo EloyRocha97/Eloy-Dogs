@@ -1,15 +1,15 @@
-@media screen and (min-width: 1075px) {
+@media screen and (min-width: 280px) {
   .boton {
     border-color: rgb(185, 79, 30);
     border-radius: 20px;
-    width: 100px;
+    width: 55px;
     background-color: #b3893b31;
   }
 
   .all {
     margin-top: 5px;
     margin-bottom: 10px;
-    margin-right: -160px;
+    margin-right: -10px;
     display: flex;
     justify-content: flex-end;
     gap: 10px;
@@ -18,10 +18,10 @@
 
   .input {
     border-color: rgb(185, 79, 30);
-    width: 300px;
-    height: 25px;
+    width: 200px;
+    height: 20px;
     border-radius: 20px;
-    padding-left: 10px;
+    padding-left: 5px;
     /* se separa el placeholder del borde ↑*/
     background-color: #b3893b31;
   }
@@ -90,18 +90,18 @@
   }
 }
 
-@media screen and (min-width: 280px) {
+@media screen and (min-width: 1075px) {
   .boton {
     border-color: rgb(185, 79, 30);
     border-radius: 20px;
-    width: 55px;
+    width: 100px;
     background-color: #b3893b31;
   }
 
   .all {
     margin-top: 5px;
     margin-bottom: 10px;
-    margin-right: -10px;
+    margin-right: -160px;
     display: flex;
     justify-content: flex-end;
     gap: 10px;
@@ -110,10 +110,10 @@
 
   .input {
     border-color: rgb(185, 79, 30);
-    width: 200px;
-    height: 20px;
+    width: 300px;
+    height: 25px;
     border-radius: 20px;
-    padding-left: 5px;
+    padding-left: 10px;
     /* se separa el placeholder del borde ↑*/
     background-color: #b3893b31;
   }

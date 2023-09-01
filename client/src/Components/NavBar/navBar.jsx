@@ -1,38 +1,37 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-import SearchBar from "../../Views/Search/search";
+import { NavLink, useLocation } from "react-router-dom";
 import style from "./navBar.module.css";
+import SearchBar from "../../Views/Search/search";
 
 const NavBar = () => {
+  const location = useLocation();
+
   return (
-    <div id="NavBar" className={style.NavLinks}>
-      <div>
+    <div id="NavBar" className={style.navBar}>
+      <div className={style.links}>
         <NavLink
-          activeStyle={{
-            color: "180,180,180",
-            fontWeight: "Open Sans",
-          }}
-          className={style.Link}
           to="/create"
+          className={style["small-links"]}
+          style={(isActive) => ({
+            color: isActive ? "#d13017" : "#8e1300",
+            "text-decoration": isActive ? "underline" : "none",
+          })}
         >
-          CREAR
+          Crear
         </NavLink>
-      </div>
-      <div>
+
         <NavLink
-          activeStyle={{
-            color: "180,180,180",
-            fontWeight: "Open Sans",
-          }}
-          className={style.Link}
           to="/home"
+          className={style["small-links"]}
+          style={(isActive) => ({
+            color: isActive ? "#d13017" : "#8e1300",
+            "text-decoration": isActive ? "underline" : "none",
+          })}
         >
-          <span>INICIO</span>
+          Inicio
         </NavLink>
       </div>
-      <div className={style.search}>
-        <SearchBar />
-      </div>
+      {location.pathname === "/home" && <SearchBar />}
     </div>
   );
 };

@@ -17,22 +17,33 @@ function Detail() {
   }, [dispatch, id]);
 
   return (
-    <div className={style.container}>
-      <div className={style.image}>
-        <img className={style.image} src={dogs.image} alt="" />
-        <div className={style.text}>
-          <h3>{dogs.name} </h3>
-          <h5>Su Peso Es De: ({dogs.weight}) Kg</h5>
-          <h5> Su Altura Es De: {dogs.height} cm</h5>
-          <h5> Su Estimado De Vida Es De: {dogs.life_span} </h5>
-        </div>
-        <div className={style.text}>
-          <h5>
-            Sus Temperamentos Son:{" "}
-            {dogs.temperament &&
-              dogs.temperament.map((e, i) => <li key={i}>{e}</li>)}{" "}
-            .
-          </h5>
+    <div className={style.detail}>
+      <div className={style.container}>
+        <div className={style.bigCard}>
+          <h1>{dogs.name} </h1>
+          <div className={style.card}>
+            <img className={style.image} src={dogs.image} alt="" />
+            <div className={style.dogTemps}>
+              <h5 className={style.tempCont}>
+                Sus Temperamentos Son:{" "}
+                <p className={style.modo}>
+                  {dogs.temperament &&
+                    dogs.temperament.map((e, i) => <li key={i}>{e}</li>)}{" "}
+                </p>
+              </h5>
+            </div>
+          </div>
+          <div className={style.tempCont}>
+            <h5>Su Peso Es De: </h5>
+            <p className={style.modo}> {dogs.weight}kg</p>
+            <h5> Su Altura Es De: </h5>
+            <p className={style.modo}> {dogs.height}cm</p>
+            <h5> Su Estimado De Vida Es De:</h5>
+            <p className={style.modo}>
+              {" "}
+              {dogs.life_span ? dogs.life_span.replace(" years", "") : ""} Años
+            </p>
+          </div>
         </div>
       </div>
     </div>

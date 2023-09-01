@@ -2,19 +2,33 @@ import React from "react";
 import styles from "./Pagination.module.css";
 
 export default function Paginate({ currentPage, allDogs, paginate }) {
-  let numbers = [];
-  let aux = 1;
-  let cantidad = Math.ceil(allDogs / 8);
+  const totalPages = Math.ceil(allDogs / 10); // Total de páginas
 
-  for (let i = 0; i < cantidad; i++) {
-    numbers.push(aux);
-    aux++;
+  let numbers = [];
+  let startPage = 1;
+  let endPage = Math.min(totalPages, 5); // Limitar a un máximo de 5 páginas mostradas
+
+  // Establecer el rango de páginas a mostrar
+  if (currentPage <= 3) {
+    endPage = Math.min(5, totalPages);
+  } else if (currentPage >= totalPages - 2) {
+    startPage = Math.max(1, totalPages - 4);
+    endPage = totalPages;
+  } else {
+    startPage = currentPage - 2;
+    endPage = currentPage + 2;
   }
+
+  for (let i = startPage; i <= endPage; i++) {
+    numbers.push(i);
+  }
+
   const handlerPaginater = (numero) => {
     paginate(numero);
   };
+
   const handlerAdelante = () => {
-    if (currentPage < aux - 1) {
+    if (currentPage < totalPages) {
       paginate(currentPage + 1);
     }
   };
@@ -24,11 +38,36 @@ export default function Paginate({ currentPage, allDogs, paginate }) {
       paginate(currentPage - 1);
     }
   };
+  const handlerFirst = () => {
+    paginate((currentPage = 1));
+  };
+
+  const handlerLast = () => {
+    console.log(totalPages);
+    paginate((currentPage = totalPages));
+  };
+
   return (
     <div className={styles.Pagination}>
-      <button className={styles.btn} onClick={handlerAtras}>
+      <button className={styles.direction} onClick={handlerFirst}>
+        {"<<<"}
+      </button>
+      <button className={styles.direction} onClick={handlerAtras}>
         {"<"}
       </button>
+      {/* {startPage > 1 && (
+        <>
+          <button className={styles.btn} onClick={() => handlerPaginater(1)}>
+            1
+          </button>
+          {startPage > 2 && <button className={styles.disabled}>...</button>}
+        </>
+      )} */}
+      {currentPage >= 4 && (
+        <button disabled={"true"} className={styles.btnDisabled}>
+          ...
+        </button>
+      )}
       {numbers?.map((numero) => {
         return (
           <button
@@ -38,10 +77,18 @@ export default function Paginate({ currentPage, allDogs, paginate }) {
           >
             {numero}
           </button>
-        ); //setea
+        );
       })}
-      <button className={styles.btn} onClick={handlerAdelante}>
+      {currentPage < 10 && (
+        <button disabled={"true"} className={styles.btnDisabled}>
+          ...
+        </button>
+      )}
+      <button className={styles.direction} onClick={handlerAdelante}>
         {">"}
+      </button>
+      <button className={styles.direction} onClick={handlerLast}>
+        {">>>"}
       </button>
     </div>
   );

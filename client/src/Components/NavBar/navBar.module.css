@@ -1,89 +1,44 @@
-@media screen and (min-width: 1075px) {
-  .NavLinks {
-    border-bottom: 2px solid rgba(142, 19, 0, 0.30196078431372547);
-    top: 0;
-    position: fixed;
-    width: 100%;
-    z-index: 100;
-    background-color: #f0ddb1;
-    height: 4em;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    max-width: 1500px;
-  }
-
-  .Link {
-    color: rgb(185, 79, 30);
-    font-size: 20px;
-    text-decoration: none;
-    font-weight: 500;
-  }
-
-  .Link:hover {
-    color: rgb(0, 0, 0);
-    transition: color 0.5s;
-  }
+.navBar {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  background-color: #f0ddb1;
+  height: 4em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 2px solid rgba(142, 19, 0, 0.30196078431372547);
 }
 
-@media screen and (min-width: 800px) {
-  .NavLinks {
-    border-bottom: 2px solid rgba(142, 19, 0, 0.30196078431372547);
-    top: 0;
-    position: fixed;
-    width: 100%;
-    z-index: 100;
-    background-color: #f0ddb1;
-    height: 4em;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    max-width: 1500px;
-  }
+.links {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  width: 50%;
+}
 
-  .Link {
-    color: rgb(185, 79, 30);
-    font-size: 20px;
-    text-decoration: none;
-    font-weight: 500;
-  }
+.active {
+  font-size: large;
+  color: rgb(185, 79, 30);
+}
 
-  .Link:hover {
-    color: rgb(0, 0, 0);
-    transition: color 0.5s;
-  }
+.disable {
+  font-size: x-large;
+  color: rgb(185, 79, 30);
+  text-decoration: underline;
 }
 
 @media screen and (min-width: 280px) {
-  .NavLinks {
-    border-bottom: 2px solid rgba(142, 19, 0, 0.30196078431372547);
-    top: 0;
-    position: fixed;
-    width: 100%;
-    z-index: 100;
-    background-color: #f0ddb1;
-    height: 4em;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    max-width: 1500px;
+  .small-links {
+    font-size: small;
   }
+}
 
-  .Link {
-    color: rgb(185, 79, 30);
-    font-size: 15px;
-    text-decoration: none;
-    font-weight: 500;
-  }
-
-  .Link:hover {
-    color: rgb(0, 0, 0);
-    transition: color 0.5s;
+@media screen and (min-width: 1000px) {
+  .small-links {
+    font-size: larger;
   }
 }

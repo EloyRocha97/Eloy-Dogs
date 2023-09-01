@@ -64,57 +64,51 @@ const Home = () => {
   }
 
   return (
-    <div className={style.margen}>
-      <div className={style.orderContainer}>
-        <button
-          onClick={(e) => {
-            loading(e);
-          }}
-          className={style.botons}
-        >
-          Traer Todo
-        </button>
-        <div>
-          <h3 className={style.textFil}>Orden Por Peso</h3>
+    <div className={style.container}>
+      <div className={style.ordersAndFilters}>
+        <div className={style.orderContainer}>
+          <button
+            onClick={(e) => {
+              loading(e);
+            }}
+            className={style.botons}
+          >
+            Traer Todo
+          </button>
           <select
             onChange={(e) => handleSortWeigth(e)}
             className={style.botons}
           >
-            <option value="Todos" default>
-              Todos
+            <option default>Peso</option>
+            <option className={style.option} value="asc_Peso">
+              Peso (Menor-Mayor)
             </option>
-            <option value="asc_Peso">Peso (Menor-Mayor)</option>
-            <option value="desc_Peso">Peso (Mayor-Menor)</option>
+            <option className={style.option} value="desc_Peso">
+              Peso (Mayor-Menor)
+            </option>
           </select>
-        </div>
 
-        <div>
-          <h3 className={style.textFil}>Orden Por Nombre</h3>
           <select onChange={(e) => handleSortName(e)} className={style.botons}>
-            <option value="Todos" default>
-              Todos
+            <option default>nombre</option>
+            <option className={style.option} value="asc_Nombre">
+              {" "}
+              Ordenados (A-Z)
             </option>
-            <option value="asc_Nombre"> Ordenados (A-Z)</option>
-            <option value="desc_Nombre"> Ordenados (Z-A)</option>
+            <option className={style.option} value="desc_Nombre">
+              {" "}
+              Ordenados (Z-A)
+            </option>
           </select>
-        </div>
 
-        <div>
-          <h3 className={style.textFil}>Filtrar Por Origen</h3>
           <select
             onChange={(e) => handleFilterCreator(e)}
             className={style.botons}
           >
-            <option value="Todos" default>
-              Todos
-            </option>
+            <option default>Fuente</option>
             <option value="Api">Api</option>
             <option value="DB">Data Base</option>
           </select>
-        </div>
 
-        <div>
-          <h3 className={style.textFil}>Filtrar Por Temperamento</h3>
           <select
             onChange={(e) => handleFilterTemp(e)}
             className={style.botons}
@@ -131,16 +125,15 @@ const Home = () => {
         </div>
       </div>
 
+      <div className={style.pages}>
+        <CardsContainer dogs={currentdogs} />
+      </div>
       <div>
         <Paginate
           currentPage={currentPage}
-          allDogs={allDogs.length}
+          allDogs={allDogs ? allDogs.length : 0}
           paginate={setCurrentPage}
         />
-      </div>
-
-      <div className={style.marginC}>
-        <CardsContainer dogs={currentdogs} />
       </div>
     </div>
   );

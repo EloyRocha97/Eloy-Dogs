@@ -3,8 +3,8 @@ import { Route, useLocation } from "react-router-dom";
 import { Home, Landing, Form, Detail } from "./Views";
 import NavBar from "./Components/NavBar/navBar";
 import axios from "axios";
-axios.defaults.baseURL = "http://localhost:3001/";
-// axios.defaults.baseURL = "https://eloy-dogs.onrender.com";
+// axios.defaults.baseURL = "http://localhost:3001/";
+axios.defaults.baseURL = "https://eloy-dogs.onrender.com";
 
 function App() {
   // const location = useLocation;

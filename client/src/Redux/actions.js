@@ -17,7 +17,7 @@ export function createdogs(payload) {
 export const GET_DOGS = "GET_DOGS";
 export const getDogs = () => {
   return async function (dispatch) {
-    const apiData = await axios.get("/dogs/");
+    const apiData = await axios.get("/dogs");
     const dogs = apiData.data;
     dispatch({ type: GET_DOGS, payload: dogs });
   };

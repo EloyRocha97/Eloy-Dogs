@@ -2,11 +2,19 @@ require("dotenv").config();
 const { Sequelize } = require("sequelize");
 const fs = require("fs");
 const path = require("path");
-const { DB_URL, DB_USER, DB_PASSWORD, DB_HOST } = process.env;
+const {
+  DB_URL,
+  DB_USER,
+  DB_PASSWORD,
+  DB_HOST,
+  DB_USER2,
+  DB_PASSWORD2,
+  DB_HOST2,
+} = process.env;
 //`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/dogs`
 //"postgres://dog_1666_user:DVdNvy1Wnr1uOxzMvtc1MruAcZlADSGK@dpg-cj0o6nh8g3n9brvbqm20-a/dog_1666"
 const sequelize = new Sequelize(
-  "postgres://dog_1666_user:DVdNvy1Wnr1uOxzMvtc1MruAcZlADSGK@dpg-cj0o6nh8g3n9brvbqm20-a/dog_1666",
+  `postgres://${DB_USER2}:${DB_PASSWORD2}@${DB_HOST2}/dog_1666`,
   {
     logging: false, // set to console.log to see the raw SQL queries
     native: false, // lets Sequelize know we can use pg-native for ~30% more speed

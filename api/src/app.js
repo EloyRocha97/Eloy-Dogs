@@ -18,7 +18,7 @@ server.use(cookieParser());
 server.use(morgan("dev"));
 server.use((req, res, next) => {
   res.header(
-    "https://dogs-api-back.onrender.com",
+    "https://eloy-dogs-front.onrender.com",
     "Access-Control-Allow-Origin",
     "http://localhost:3000"
   ); // update to match the domain you will make the request from

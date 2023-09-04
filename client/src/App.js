@@ -4,7 +4,7 @@ import { Home, Landing, Form, Detail } from "./Views";
 import NavBar from "./Components/NavBar/navBar";
 import axios from "axios";
 // axios.defaults.baseURL = "http://localhost:3001/";
-axios.defaults.baseURL = "https://eloy-dogs.onrender.com";
+axios.defaults.baseURL = "https://eloy-dogs-front.onrender.com";
 
 function App() {
   // const location = useLocation;

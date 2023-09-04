@@ -4,7 +4,7 @@ import { Home, Landing, Form, Detail } from "./Views";
 import NavBar from "./Components/NavBar/navBar";
 import axios from "axios";
 // axios.defaults.baseURL = "http://localhost:3001/";
-axios.defaults.baseURL = "https://eloy-dogs.onrender.com";
+axios.defaults.baseURL = "https://dogs-api-back.onrender.com";
 
 function App() {
   // const location = useLocation;
@@ -13,14 +13,7 @@ function App() {
     <div className="App">
       {/* {location.pathname !== "/" && <NavBar />} */}
       <Route
-        path={[
-          "/home",
-          "/recipes",
-          "/about",
-          "/addrecipes",
-          `/dogs`,
-          "/create",
-        ]}
+        path={["/home", "/dogs", "/dogs/:id", "/create"]}
         component={NavBar}
       />
       <Route exact path="/" component={Landing} />

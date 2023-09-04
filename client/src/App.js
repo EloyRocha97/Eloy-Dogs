@@ -12,10 +12,7 @@ function App() {
   return (
     <div className="App">
       {/* {location.pathname !== "/" && <NavBar />} */}
-      <Route
-        path={["/home", "/dogs", "/dogs/:id", "/create"]}
-        component={NavBar}
-      />
+      <Route path={["/home", "/dogs/:id", "/create"]} component={NavBar} />
       <Route exact path="/" component={Landing} />
 
       <Route path="/home" render={() => <Home />} />

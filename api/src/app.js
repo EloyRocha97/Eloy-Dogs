@@ -13,7 +13,7 @@ server.name = "API";
 
 server.use(
   cors({
-    origin: ["https://eloy-dogs-front.onrender.com"],
+    origin: "https://eloy-dogs-front.onrender.com",
     credentials: true,
   })
 );

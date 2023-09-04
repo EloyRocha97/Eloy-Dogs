@@ -13,10 +13,13 @@ const {
 } = process.env;
 //`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/dogs`
 //"postgres://dog_1666_user:DVdNvy1Wnr1uOxzMvtc1MruAcZlADSGK@dpg-cj0o6nh8g3n9brvbqm20-a/dog_1666"
-const sequelize = new Sequelize(DB_URL, {
-  logging: false, // set to console.log to see the raw SQL queries
-  native: false, // lets Sequelize know we can use pg-native for ~30% more speed
-});
+const sequelize = new Sequelize(
+  "postgres://dog_1666_user:DVdNvy1Wnr1uOxzMvtc1MruAcZlADSGK@dpg-cj0o6nh8g3n9brvbqm20-a/dog_1666",
+  {
+    logging: false, // set to console.log to see the raw SQL queries
+    native: false, // lets Sequelize know we can use pg-native for ~30% more speed
+  }
+);
 const basename = path.basename(__filename);
 
 const modelDefiners = [];

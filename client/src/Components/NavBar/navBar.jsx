@@ -14,7 +14,7 @@ const NavBar = () => {
           className={style["small-links"]}
           style={(isActive) => ({
             color: isActive ? "#d13017" : "#8e1300",
-            "text-decoration": isActive ? "underline" : "none",
+            textDecoration: isActive ? "underline" : "none",
           })}
         >
           Crear
@@ -25,7 +25,7 @@ const NavBar = () => {
           className={style["small-links"]}
           style={(isActive) => ({
             color: isActive ? "#d13017" : "#8e1300",
-            "text-decoration": isActive ? "underline" : "none",
+            textDecoration: isActive ? "underline" : "none",
           })}
         >
           Inicio

@@ -64,7 +64,7 @@ export default function Paginate({ currentPage, allDogs, paginate }) {
         </>
       )} */}
       {currentPage >= 4 && (
-        <button disabled={"true"} className={styles.btnDisabled}>
+        <button disabled={true} className={styles.btnDisabled}>
           ...
         </button>
       )}
@@ -80,7 +80,7 @@ export default function Paginate({ currentPage, allDogs, paginate }) {
         );
       })}
       {currentPage < 10 && (
-        <button disabled={"true"} className={styles.btnDisabled}>
+        <button disabled={true} className={styles.btnDisabled}>
           ...
         </button>
       )}

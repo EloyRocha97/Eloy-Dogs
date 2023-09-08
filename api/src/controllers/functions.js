@@ -20,7 +20,7 @@ const dataApi = async () => {
           ? e.weight.metric.substr(0, 2)
           : "0",
         life_span: e.life_span,
-        image: e.image?.url,
+        image: e?.image?.url,
         temperament: e.hasOwnProperty("temperament")
           ? e.temperament.split(", ")
           : ["No"],

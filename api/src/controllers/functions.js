@@ -3,6 +3,7 @@ const { Dog, Temperament } = require("../db");
 require("dotenv").config();
 const { v4: uuidv4 } = require("uuid");
 const { API_KEY } = process.env;
+const img = require("./img/perro.png");
 
 // GET ALL API-----------------------------------------------------
 
@@ -20,7 +21,7 @@ const dataApi = async () => {
           ? e.weight.metric.substr(0, 2)
           : "0",
         life_span: e.life_span,
-        image: e?.reference_image_id,
+        image: img,
         temperament: e.hasOwnProperty("temperament")
           ? e.temperament.split(", ")
           : ["No"],
